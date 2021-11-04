@@ -43,6 +43,12 @@ public class Program {
                 default -> System.out.println("Выбран неверный номер действия");
             }
         } while (toContinue);
+        try {
+            iterator.get().close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Возникла проблема при закрытии потока");
+        }
 
         // Возможность повторной работы программы
         System.out.println("Хотите ли проитерироваться по новому файлу?");
@@ -80,3 +86,4 @@ public class Program {
         System.out.println("3. Выйти из программы или перейти на использование другово файла");
     }
 }
+
