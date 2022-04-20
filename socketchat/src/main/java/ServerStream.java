@@ -24,7 +24,7 @@ public class ServerStream implements Runnable {
             allNames.add(name);
 
             while (true) {
-                String line = br.readLine(); // Читать строку
+                String line = br.readLine();
                 if (line.equals("/exit")) {
                     System.out.println(name + " вышел из чата");
                     break;
